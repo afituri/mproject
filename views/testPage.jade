@@ -1,0 +1,18 @@
+extends layout
+//- block navigation
+
+  <input id="input-700" name="kartik-input-700" type="file" multiple=true class="file-loading" data-upload-url="/site/file-upload" data-max-file-count="10">
+ 
+// Scenario 2: Batch upload in synchronous mode without parallel server calls (check `uploadAsync` property)
+input#input-701.file-loading(name='kartik-input-701', type='file', multiple='true', data-upload-url='/site/file-upload', data-upload-async='false', data-max-file-count='10')
+
+ 
+// Scenario 3: AJAX based uploads with initial preview and initial preview delete URL. The `overwriteInitial` property is set to false.
+input#input-702.file-loading(name='kartik-input-702', type='file', multiple='true', data-upload-url='/site/file-upload', data-max-file-count='10')
+
+
+
+  
+
+script(src="/js/bootstrap.min.js")
+script(src="/js/jquery-1.11.1.min.js")
