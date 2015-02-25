@@ -8,6 +8,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var adminPage = require('./routes/adminPage');
+var charts = require('./routes/charts');
+var tables = require('./routes/tables');
+var forms = require('./routes/forms');
+var blankPage = require('./routes/blankPage');
+var adminLogin = require('./routes/adminLogin');
 var app = express();
 
 // minimal config
@@ -32,8 +38,15 @@ app.use(session({secret: 'NagaDev',resave: true,saveUninitialized: true}));
 app.use(i18n.init);
 
 // Routes
-app.use('/', routes);
+
 app.use('/users', users);
+app.use('/adminPage',adminPage);
+app.use('/charts',charts);
+app.use('/tables',tables);
+app.use('/forms',forms);
+app.use('/blankPage',blankPage);
+app.use('/adminLogin',adminLogin);
+app.use('/', routes);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
