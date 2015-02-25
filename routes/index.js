@@ -8,6 +8,15 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
+/* GET testPage. */
+router.get('/testPage', function(req, res) {
+  res.render('testPage', { title: 'testPage' });
+});
+
+/* GET testTwo. */
+router.get('/testTwo', function(req, res) {
+  res.render('testTwo', { title: 'testTwo' });
+});
 // set a cookie to requested locale
 router.get('/:locale', function (req, res) {
   i18n.setdeflan(req,res);
