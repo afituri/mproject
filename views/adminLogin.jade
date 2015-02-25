@@ -1,3 +1,46 @@
 extends layout
 
 block content
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        h4(style='border-bottom: 1px solid #c5c5c5; color:#FFFFFF;')
+          i.glyphicon.glyphicon-user
+          |     Admin Access
+        #form-olvidado(style='padding: 20px;')
+          form#login-form(accept-charset='UTF-8', role='form', method='post')
+            fieldset
+              .form-group.input-group
+                span.input-group-addon
+                  | @
+                input.form-control(placeholder='Email', name='email', type='email', required='', autofocus='')
+              .form-group.input-group
+                span.input-group-addon
+                  i.glyphicon.glyphicon-lock
+                input.form-control(placeholder='Password', name='password', type='password', value='', required='')
+              .form-group
+                button.btn.btn-primary.btn-block(type='submit')
+                  | Access
+                p.help-block
+                  a#olvidado.pull-right.text-muted(href='#')
+                    small Forgot your password?
+        #form-olvidado(style='display: none;')
+          h4(style='color:#FFFFFF;')
+            | Forgot your password?
+          form#login-recordar(accept-charset='UTF-8', role='form', method='post')
+            fieldset
+              span.help-block
+                | Email address you use to log in to your account
+                br
+                |           We'll send you an email with instructions to choose a new password.
+              .form-group.input-group
+                span.input-group-addon
+                  | @
+                input.form-control(placeholder='Email', name='email', type='email', required='')
+              button#btn-olvidado.btn.btn-primary.btn-block(type='submit')
+                | Continue
+              p.help-block
+                a#acceso.text-muted(href='#')
+                  small Admin Access
+  script(src='/javascripts/jquery.js')                  
+  script(src='/javascripts/adminLogin.js')                  
