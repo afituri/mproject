@@ -8,18 +8,17 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    // Custom CSS For AdminPage
+    // Bootstrap Core CSS
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
     link(href='/stylesheets/sb-admin.css', rel='stylesheet')
-    // Morris Charts CSS For AdminPage
+    // Morris Charts CSS
     link(href='/stylesheets/plugins/morris.css', rel='stylesheet')
-    // Custom Fonts For AdminPage
+    // Custom Fonts
     link(href='/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/bootstrap-rtl.min.css')
-    link(rel='stylesheet', href='/css/bootstrap-editable.css')
-    link(rel='stylesheet', href='/css/bootstrap-datetimepicker.min.css')
-    link(rel='stylesheet', href='/css/jumbotron-narrow.css')
-    link(rel='stylesheet', href='/css/jasny-bootstrap.min.css')
+    //- link(rel='stylesheet', href='/stylesheets/bootstrap-rtl.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-editable.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-datetimepicker.min.css')
   body
     block content
       block navigation
