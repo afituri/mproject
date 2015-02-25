@@ -9,7 +9,7 @@ module.exports = {
     res.cookie('locale', req.cookies.locale);
   },
 
-  setdeflan: function (req,res){
+  setdeflan: function (req,res) {
     i18n.setLocale(req.params.locale);
     req.session.language = req.params.locale;
     res.cookie('locale', req.params.locale);
