@@ -1,29 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var i18n = require('i18n');
+var i18n = require('../app/i18n');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  setlang(req,res);
+  i18n.setlang(req,res);
   res.render('index', { title: 'Express' });
 });
 
 // set a cookie to requested locale
 router.get('/:locale', function (req, res) {
-  setdeflan(req,res);
+  i18n.setdeflan(req,res);
   res.redirect("/");
 });
 
-function setlang(req,res){
-  if(!req.cookies.locale)
-    req.cookies.locale ="ar";
-  i18n.setLocale(req.cookies.locale);
-  res.cookie('locale', req.cookies.locale);
-}
-function setdeflan(req,res){
-  i18n.setLocale(req.params.locale);
-  req.session.language = req.params.locale;
-  res.cookie('locale', req.params.locale);
-}
 
 module.exports = router;
